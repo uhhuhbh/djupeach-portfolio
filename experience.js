@@ -1,0 +1,33 @@
+(() => {
+'use strict';
+const media=window.PORTFOLIO_MEDIA,$=s=>document.querySelector(s),pad=n=>String(n).padStart(2,'0');
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+$('.photo-wall .section-top span:last-child').textContent=`图片摄影 · ${media.photography.length} FRAMES`;
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const rail=$('#hero-rail');let heroIndex=0,auto=!reduce,inView=true,hover=false,drag=null;
+rail.innerHTML=media.hero.map((f,i)=>`<figure class="hero-slide" aria-label="封面 ${i+1}：${esc(f.title)}"><img src="${f.src}" width="${f.width}" height="${f.height}" alt="《${esc(f.title)}》封面静帧" draggable="false" ${i?'loading="lazy"':'fetchpriority="high"'}><figcaption><span>《${esc(f.title)}》 ${esc(f.english)}</span><button data-project="${f.project}" data-frame="${f.frame}" aria-label="展开封面所属作品《${esc(f.title)}》">查看作品 ↗</button></figcaption></figure>`).join('');
+$('#hero-thumbs').innerHTML=media.hero.map((f,i)=>`<button data-hero-index="${i}" aria-label="选择封面 ${i+1}：${esc(f.title)}" aria-pressed="${i===0}" class="hero-thumb ${i===0?'active':''}"><img src="${f.src}" alt="" width="${f.width}" height="${f.height}"><span>${pad(i+1)}</span></button>`).join('');
+function updateHero(){heroIndex=Math.max(0,Math.min(media.hero.length-1,Math.round(rail.scrollLeft/rail.clientWidth)));$('#hero-count').textContent=`${pad(heroIndex+1)} / ${pad(media.hero.length)}`;$('#hero-thumbs').querySelectorAll('button').forEach((b,i)=>{b.classList.toggle('active',i===heroIndex);b.setAttribute('aria-pressed',i===heroIndex?'true':'false')})}
+function setAuto(value){auto=value;$('#hero-play').textContent=auto?'暂停轮播 Ⅱ':'播放轮播 ▷';$('#hero-play').setAttribute('aria-pressed',String(auto))}
+function selectHero(i,manual=true){if(manual)setAuto(false);const n=(i+media.hero.length)%media.hero.length;rail.scrollTo({left:n*rail.clientWidth,behavior:reduce?'instant':'smooth'})}
+rail.addEventListener('scroll',updateHero,{passive:true});$('#hero-prev').addEventListener('click',()=>selectHero(heroIndex-1));$('#hero-next').addEventListener('click',()=>selectHero(heroIndex+1));$('#hero-play').addEventListener('click',()=>setAuto(!auto));$('#hero-thumbs').addEventListener('click',e=>{const b=e.target.closest('[data-hero-index]');if(b)selectHero(Number(b.dataset.heroIndex))});
+rail.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();selectHero(heroIndex+(e.key==='ArrowRight'?1:-1))}});
+rail.addEventListener('wheel',e=>{setAuto(false);if(Math.abs(e.deltaY)>Math.abs(e.deltaX)){const canScroll=e.deltaY>0?rail.scrollLeft<rail.scrollWidth-rail.clientWidth-2:rail.scrollLeft>2;if(canScroll){e.preventDefault();rail.scrollLeft+=e.deltaY}}},{passive:false});
+rail.addEventListener('pointerdown',e=>{setAuto(false);if(e.pointerType==='mouse'&&e.button===0&&!e.target.closest('button')){drag={x:e.clientX,left:rail.scrollLeft};rail.setPointerCapture(e.pointerId);rail.classList.add('dragging')}});
+rail.addEventListener('pointermove',e=>{if(drag)rail.scrollLeft=drag.left-(e.clientX-drag.x)});function endDrag(){drag=null;rail.classList.remove('dragging')}rail.addEventListener('pointerup',endDrag);rail.addEventListener('pointercancel',endDrag);
+$('.hero-image').addEventListener('mouseenter',()=>hover=true);$('.hero-image').addEventListener('mouseleave',()=>hover=false);
+new IntersectionObserver(es=>{inView=es[0].isIntersecting},{threshold:.2}).observe($('.hero'));
+setInterval(()=>{if(auto&&inView&&!hover&&!document.hidden&&!document.querySelector('dialog[open]'))selectHero(heroIndex+1,false)},7500);window.addEventListener('resize',()=>{rail.scrollTo({left:heroIndex*rail.clientWidth,behavior:'instant'})});setAuto(auto);
+// Balance the current photography archive across three scrolling rows.
+const rowSize=Math.ceil(media.photography.length/3);
+const groups=[media.photography.slice(0,rowSize),media.photography.slice(rowSize,rowSize*2),media.photography.slice(rowSize*2)];
+function photoTiles(items,duplicate=false){return items.map(p=>`<button class="photo-tile" data-photo="${p.id}" style="--aspect:${p.width/p.height}" ${duplicate?'tabindex="-1"':''} aria-label="展开摄影作品 ${pad(p.id+1)}"><img src="${p.thumbnailSrc || p.src}" width="${p.width}" height="${p.height}" loading="lazy" alt="周泽同图片摄影作品 ${pad(p.id+1)}" draggable="false"><span>${pad(p.id+1)}</span></button>`).join('')}
+$('#photo-rows').innerHTML=groups.map((g,i)=>`<div class="wall-row" tabindex="0" aria-label="摄影滚动墙第 ${i+1} 行"><div class="wall-track track-${i}"><div class="wall-group">${photoTiles(g)}</div><div class="wall-group" aria-hidden="true">${photoTiles(g,true)}</div></div></div>`).join('');
+const wall=$('.photo-wall');let wallPaused=reduce;function setWallPaused(v){wallPaused=v;wall.classList.toggle('wall-paused',v);$('#wall-pause').textContent=v?'继续滚动 ▷':'暂停滚动 Ⅱ';$('#wall-pause').setAttribute('aria-pressed',String(v))}$('#wall-pause').addEventListener('click',()=>setWallPaused(!wallPaused));setWallPaused(wallPaused);new IntersectionObserver(es=>wall.classList.toggle('wall-live',es[0].isIntersecting),{rootMargin:'200px'}).observe(wall);
+wall.addEventListener('pointerdown',e=>{if(e.pointerType==='touch')setWallPaused(true)});wall.addEventListener('focusin',()=>setWallPaused(true));
+const photoDialog=$('#photo-dialog');let photoIndex=0,lastFocus=null;
+function showPhoto(i){photoIndex=(i+media.photography.length)%media.photography.length;const p=media.photography[photoIndex];$('#photo-full').src=p.src;$('#photo-full').alt=`周泽同图片摄影作品 ${pad(photoIndex+1)}`;$('#photo-count').textContent=`${pad(photoIndex+1)} / ${pad(media.photography.length)}`}
+function closePhoto(){photoDialog.close();if(!document.querySelector('dialog[open]'))document.body.classList.remove('modal-open');if(lastFocus?.isConnected)lastFocus.focus({preventScroll:true})}
+wall.addEventListener('click',e=>{const b=e.target.closest('[data-photo]');if(b){lastFocus=b;setWallPaused(true);showPhoto(Number(b.dataset.photo));photoDialog.showModal();document.body.classList.add('modal-open')}});
+$('#photo-close').addEventListener('click',closePhoto);photoDialog.addEventListener('close',()=>{if(!document.querySelector('dialog[open]'))document.body.classList.remove('modal-open')});$('#photo-prev').addEventListener('click',()=>showPhoto(photoIndex-1));$('#photo-next').addEventListener('click',()=>showPhoto(photoIndex+1));photoDialog.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();showPhoto(photoIndex+(e.key==='ArrowRight'?1:-1))}});
+})();
