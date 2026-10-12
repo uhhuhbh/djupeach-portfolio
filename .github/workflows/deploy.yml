@@ -9,6 +9,7 @@ on:
       - 'styles.css'
       - 'assets/**'
       - '.github/workflows/deploy.yml'
+      - '3470d50ba81685196fde9f294fa8957c.txt'
   workflow_dispatch:
 
 permissions:
@@ -35,6 +36,7 @@ jobs:
           mkdir -p _site
           cp index.html styles.css app.js experience.js works.js media.js _site/
           cp -R assets _site/assets
+          cp 3470d50ba81685196fde9f294fa8957c.txt _site/3470d50ba81685196fde9f294fa8957c.txt
           touch _site/.nojekyll
 
       - name: Upload site artifact
