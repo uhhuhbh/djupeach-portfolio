@@ -1,6 +1,7 @@
 node_modules/
 dist/
 _site/
+assets/optimized/
 .DS_Store
 .env
 .env.*

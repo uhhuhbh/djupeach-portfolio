@@ -15,77 +15,77 @@ window.WORKS = [
     "lens": "Nisi Athena Prime",
     "frames": [
       {
-        "src": "assets/images/page_03_photo_01.webp",
+        "src": "assets/optimized/work-display/page_03_photo_01.jpg",
         "page": 3,
         "width": 2352,
         "height": 1012,
         "source": "Assets/objects/page_03_photo_01.png"
       },
       {
-        "src": "assets/images/page_04_photo_01.webp",
+        "src": "assets/optimized/work-display/page_04_photo_01.jpg",
         "page": 4,
         "width": 2344,
         "height": 1056,
         "source": "Assets/objects/page_04_photo_01.png"
       },
       {
-        "src": "assets/images/page_05_photo_01.webp",
+        "src": "assets/optimized/work-display/page_05_photo_01.jpg",
         "page": 5,
         "width": 1080,
         "height": 408,
         "source": "Assets/objects/page_05_photo_01.png"
       },
       {
-        "src": "assets/images/page_05_photo_04.webp",
+        "src": "assets/optimized/work-display/page_05_photo_04.jpg",
         "page": 5,
         "width": 1076,
         "height": 408,
         "source": "Assets/objects/page_05_photo_04.png"
       },
       {
-        "src": "assets/images/page_05_photo_02.webp",
+        "src": "assets/optimized/work-display/page_05_photo_02.jpg",
         "page": 5,
         "width": 1080,
         "height": 460,
         "source": "Assets/objects/page_05_photo_02.png"
       },
       {
-        "src": "assets/images/page_05_photo_03.webp",
+        "src": "assets/optimized/work-display/page_05_photo_03.jpg",
         "page": 5,
         "width": 1080,
         "height": 460,
         "source": "Assets/objects/page_05_photo_03.png"
       },
       {
-        "src": "assets/images/page_06_photo_01.webp",
+        "src": "assets/optimized/work-display/page_06_photo_01.jpg",
         "page": 6,
         "width": 1048,
         "height": 440,
         "source": "Assets/objects/page_06_photo_01.png"
       },
       {
-        "src": "assets/images/page_06_photo_02.webp",
+        "src": "assets/optimized/work-display/page_06_photo_02.jpg",
         "page": 6,
         "width": 1048,
         "height": 440,
         "source": "Assets/objects/page_06_photo_02.png"
       },
       {
-        "src": "assets/images/page_06_photo_03.webp",
+        "src": "assets/optimized/work-display/page_06_photo_03.jpg",
         "page": 6,
         "width": 1048,
         "height": 420,
         "source": "Assets/objects/page_06_photo_03.png"
       },
       {
-        "src": "assets/images/page_06_photo_04.webp",
+        "src": "assets/optimized/work-display/page_06_photo_04.jpg",
         "page": 6,
         "width": 1048,
         "height": 420,
         "source": "Assets/objects/page_06_photo_04.png"
       },
       {
-        "src": "assets/images/after-tide-hero-235.webp",
+        "src": "assets/optimized/work-display/after-tide-hero-235.jpg",
         "width": 3760,
         "height": 1600,
         "sourceFile": "静帧 2026-02-09 045141_1.35.2.PNG",
@@ -112,70 +112,70 @@ window.WORKS = [
     "lens": "DZO 叙 / Altas Mercury",
     "frames": [
       {
-        "src": "assets/images/page_07_photo_01.webp",
+        "src": "assets/optimized/work-display/page_07_photo_01.jpg",
         "page": 7,
         "width": 2136,
         "height": 952,
         "source": "Assets/objects/page_07_photo_01.png"
       },
       {
-        "src": "assets/images/page_08_photo_01.webp",
+        "src": "assets/optimized/work-display/page_08_photo_01.jpg",
         "page": 8,
         "width": 2344,
         "height": 1056,
         "source": "Assets/objects/page_08_photo_01.png"
       },
       {
-        "src": "assets/images/page_09_photo_02.webp",
+        "src": "assets/optimized/work-display/page_09_photo_02.jpg",
         "page": 9,
         "width": 1100,
         "height": 476,
         "source": "Assets/objects/page_09_photo_02.png"
       },
       {
-        "src": "assets/images/page_09_photo_03.webp",
+        "src": "assets/optimized/work-display/page_09_photo_03.jpg",
         "page": 9,
         "width": 1096,
         "height": 476,
         "source": "Assets/objects/page_09_photo_03.png"
       },
       {
-        "src": "assets/images/page_09_photo_01.webp",
+        "src": "assets/optimized/work-display/page_09_photo_01.jpg",
         "page": 9,
         "width": 1100,
         "height": 476,
         "source": "Assets/objects/page_09_photo_01.png"
       },
       {
-        "src": "assets/images/page_09_photo_04.webp",
+        "src": "assets/optimized/work-display/page_09_photo_04.jpg",
         "page": 9,
         "width": 1096,
         "height": 476,
         "source": "Assets/objects/page_09_photo_04.png"
       },
       {
-        "src": "assets/images/page_10_photo_02.webp",
+        "src": "assets/optimized/work-display/page_10_photo_02.jpg",
         "page": 10,
         "width": 1080,
         "height": 468,
         "source": "Assets/objects/page_10_photo_02.png"
       },
       {
-        "src": "assets/images/page_10_photo_03.webp",
+        "src": "assets/optimized/work-display/page_10_photo_03.jpg",
         "page": 10,
         "width": 1080,
         "height": 468,
         "source": "Assets/objects/page_10_photo_03.png"
       },
       {
-        "src": "assets/images/page_10_photo_01.webp",
+        "src": "assets/optimized/work-display/page_10_photo_01.jpg",
         "page": 10,
         "width": 1080,
         "height": 464,
         "source": "Assets/objects/page_10_photo_01.png"
       },
       {
-        "src": "assets/images/page_10_photo_04.webp",
+        "src": "assets/optimized/work-display/page_10_photo_04.jpg",
         "page": 10,
         "width": 1080,
         "height": 464,
@@ -198,63 +198,63 @@ window.WORKS = [
     "lens": "Cooke Panchro/i · Angenieux EZ-1 45-135",
     "frames": [
       {
-        "src": "assets/images/page_11_photo_01.webp",
+        "src": "assets/optimized/work-display/page_11_photo_01.jpg",
         "page": 11,
         "width": 1596,
         "height": 900,
         "source": "Assets/objects/page_11_photo_01.png"
       },
       {
-        "src": "assets/images/page_12_photo_02.webp",
+        "src": "assets/optimized/work-display/page_12_photo_02.jpg",
         "page": 12,
         "width": 940,
         "height": 552,
         "source": "Assets/objects/page_12_photo_02.png"
       },
       {
-        "src": "assets/images/page_12_photo_04.webp",
+        "src": "assets/optimized/work-display/page_12_photo_04.jpg",
         "page": 12,
         "width": 972,
         "height": 552,
         "source": "Assets/objects/page_12_photo_04.png"
       },
       {
-        "src": "assets/images/page_12_photo_01.webp",
+        "src": "assets/optimized/work-display/page_12_photo_01.jpg",
         "page": 12,
         "width": 972,
         "height": 552,
         "source": "Assets/objects/page_12_photo_01.png"
       },
       {
-        "src": "assets/images/page_12_photo_03.webp",
+        "src": "assets/optimized/work-display/page_12_photo_03.jpg",
         "page": 12,
         "width": 972,
         "height": 552,
         "source": "Assets/objects/page_12_photo_03.png"
       },
       {
-        "src": "assets/images/page_13_photo_02.webp",
+        "src": "assets/optimized/work-display/page_13_photo_02.jpg",
         "page": 13,
         "width": 968,
         "height": 552,
         "source": "Assets/objects/page_13_photo_02.png"
       },
       {
-        "src": "assets/images/page_13_photo_03.webp",
+        "src": "assets/optimized/work-display/page_13_photo_03.jpg",
         "page": 13,
         "width": 980,
         "height": 556,
         "source": "Assets/objects/page_13_photo_03.png"
       },
       {
-        "src": "assets/images/page_13_photo_01.webp",
+        "src": "assets/optimized/work-display/page_13_photo_01.jpg",
         "page": 13,
         "width": 980,
         "height": 556,
         "source": "Assets/objects/page_13_photo_01.png"
       },
       {
-        "src": "assets/images/page_13_photo_04.webp",
+        "src": "assets/optimized/work-display/page_13_photo_04.jpg",
         "page": 13,
         "width": 764,
         "height": 552,
@@ -276,70 +276,70 @@ window.WORKS = [
     "lens": "Atlas Mercury",
     "frames": [
       {
-        "src": "assets/images/page_14_photo_01.webp",
+        "src": "assets/optimized/work-display/page_14_photo_01.jpg",
         "page": 14,
         "width": 2124,
         "height": 916,
         "source": "Assets/objects/page_14_photo_01.png"
       },
       {
-        "src": "assets/images/page_15_photo_01.webp",
+        "src": "assets/optimized/work-display/page_15_photo_01.jpg",
         "page": 15,
         "width": 1072,
         "height": 464,
         "source": "Assets/objects/page_15_photo_01.png"
       },
       {
-        "src": "assets/images/page_15_photo_04.webp",
+        "src": "assets/optimized/work-display/page_15_photo_04.jpg",
         "page": 15,
         "width": 1068,
         "height": 464,
         "source": "Assets/objects/page_15_photo_04.png"
       },
       {
-        "src": "assets/images/page_15_photo_02.webp",
+        "src": "assets/optimized/work-display/page_15_photo_02.jpg",
         "page": 15,
         "width": 1072,
         "height": 464,
         "source": "Assets/objects/page_15_photo_02.png"
       },
       {
-        "src": "assets/images/page_15_photo_03.webp",
+        "src": "assets/optimized/work-display/page_15_photo_03.jpg",
         "page": 15,
         "width": 1072,
         "height": 464,
         "source": "Assets/objects/page_15_photo_03.png"
       },
       {
-        "src": "assets/images/page_16_photo_01.webp",
+        "src": "assets/optimized/work-display/page_16_photo_01.jpg",
         "page": 16,
         "width": 2344,
         "height": 1056,
         "source": "Assets/objects/page_16_photo_01.png"
       },
       {
-        "src": "assets/images/page_17_photo_01.webp",
+        "src": "assets/optimized/work-display/page_17_photo_01.jpg",
         "page": 17,
         "width": 1068,
         "height": 464,
         "source": "Assets/objects/page_17_photo_01.png"
       },
       {
-        "src": "assets/images/page_17_photo_03.webp",
+        "src": "assets/optimized/work-display/page_17_photo_03.jpg",
         "page": 17,
         "width": 1072,
         "height": 464,
         "source": "Assets/objects/page_17_photo_03.png"
       },
       {
-        "src": "assets/images/page_17_photo_02.webp",
+        "src": "assets/optimized/work-display/page_17_photo_02.jpg",
         "page": 17,
         "width": 1068,
         "height": 464,
         "source": "Assets/objects/page_17_photo_02.png"
       },
       {
-        "src": "assets/images/page_17_photo_04.webp",
+        "src": "assets/optimized/work-display/page_17_photo_04.jpg",
         "page": 17,
         "width": 1068,
         "height": 464,
@@ -361,42 +361,42 @@ window.WORKS = [
     "lens": "Nisi Athena Prime",
     "frames": [
       {
-        "src": "assets/images/page_18_photo_01.webp",
+        "src": "assets/optimized/work-display/page_18_photo_01.jpg",
         "page": 18,
         "width": 2296,
         "height": 972,
         "source": "Assets/objects/page_18_photo_01.png"
       },
       {
-        "src": "assets/images/page_19_photo_02.webp",
+        "src": "assets/optimized/work-display/page_19_photo_02.jpg",
         "page": 19,
         "width": 1116,
         "height": 460,
         "source": "Assets/objects/page_19_photo_02.png"
       },
       {
-        "src": "assets/images/page_19_photo_04.webp",
+        "src": "assets/optimized/work-display/page_19_photo_04.jpg",
         "page": 19,
         "width": 1116,
         "height": 480,
         "source": "Assets/objects/page_19_photo_04.png"
       },
       {
-        "src": "assets/images/page_19_photo_01.webp",
+        "src": "assets/optimized/work-display/page_19_photo_01.jpg",
         "page": 19,
         "width": 1132,
         "height": 464,
         "source": "Assets/objects/page_19_photo_01.png"
       },
       {
-        "src": "assets/images/page_19_photo_03.webp",
+        "src": "assets/optimized/work-display/page_19_photo_03.jpg",
         "page": 19,
         "width": 1120,
         "height": 480,
         "source": "Assets/objects/page_19_photo_03.png"
       },
       {
-        "src": "assets/images/page_20_photo_01.webp",
+        "src": "assets/optimized/work-display/page_20_photo_01.jpg",
         "page": 20,
         "width": 2344,
         "height": 1056,
@@ -419,70 +419,70 @@ window.WORKS = [
     "lens": "Blazar Mantis",
     "frames": [
       {
-        "src": "assets/images/page_21_photo_01.webp",
+        "src": "assets/optimized/work-display/page_21_photo_01.jpg",
         "page": 21,
         "width": 2236,
         "height": 956,
         "source": "Assets/objects/page_21_photo_01.png"
       },
       {
-        "src": "assets/images/page_22_photo_01.webp",
+        "src": "assets/optimized/work-display/page_22_photo_01.jpg",
         "page": 22,
         "width": 2344,
         "height": 1056,
         "source": "Assets/objects/page_22_photo_01.png"
       },
       {
-        "src": "assets/images/page_23_photo_02.webp",
+        "src": "assets/optimized/work-display/page_23_photo_02.jpg",
         "page": 23,
         "width": 1112,
         "height": 480,
         "source": "Assets/objects/page_23_photo_02.png"
       },
       {
-        "src": "assets/images/page_23_photo_03.webp",
+        "src": "assets/optimized/work-display/page_23_photo_03.jpg",
         "page": 23,
         "width": 1112,
         "height": 464,
         "source": "Assets/objects/page_23_photo_03.png"
       },
       {
-        "src": "assets/images/page_23_photo_01.webp",
+        "src": "assets/optimized/work-display/page_23_photo_01.jpg",
         "page": 23,
         "width": 1112,
         "height": 472,
         "source": "Assets/objects/page_23_photo_01.png"
       },
       {
-        "src": "assets/images/page_23_photo_04.webp",
+        "src": "assets/optimized/work-display/page_23_photo_04.jpg",
         "page": 23,
         "width": 1112,
         "height": 480,
         "source": "Assets/objects/page_23_photo_04.png"
       },
       {
-        "src": "assets/images/page_24_photo_01.webp",
+        "src": "assets/optimized/work-display/page_24_photo_01.jpg",
         "page": 24,
         "width": 1112,
         "height": 472,
         "source": "Assets/objects/page_24_photo_01.png"
       },
       {
-        "src": "assets/images/page_24_photo_03.webp",
+        "src": "assets/optimized/work-display/page_24_photo_03.jpg",
         "page": 24,
         "width": 1120,
         "height": 476,
         "source": "Assets/objects/page_24_photo_03.png"
       },
       {
-        "src": "assets/images/page_24_photo_02.webp",
+        "src": "assets/optimized/work-display/page_24_photo_02.jpg",
         "page": 24,
         "width": 1112,
         "height": 472,
         "source": "Assets/objects/page_24_photo_02.png"
       },
       {
-        "src": "assets/images/page_24_photo_04.webp",
+        "src": "assets/optimized/work-display/page_24_photo_04.jpg",
         "page": 24,
         "width": 1112,
         "height": 476,
@@ -508,67 +508,67 @@ window.WORKS = [
     "lens": "Tamron 28–75mm F2.8 G2 / SONGRAW 50mm F1.4",
     "frames": [
       {
-        "src": "assets/images/meng-dao-le-01.webp",
+        "src": "assets/optimized/work-display/meng-dao-le-01.jpg",
         "width": 3840,
         "height": 2160
       },
       {
-        "src": "assets/images/meng-dao-le-02.webp",
+        "src": "assets/optimized/work-display/meng-dao-le-02.jpg",
         "width": 3840,
         "height": 2160
       },
       {
-        "src": "assets/images/meng-dao-le-03.webp",
+        "src": "assets/optimized/work-display/meng-dao-le-03.jpg",
         "width": 3840,
         "height": 2160
       },
       {
-        "src": "assets/images/meng-dao-le-04.webp",
+        "src": "assets/optimized/work-display/meng-dao-le-04.jpg",
         "width": 3840,
         "height": 2160
       },
       {
-        "src": "assets/images/meng-dao-le-05.webp",
+        "src": "assets/optimized/work-display/meng-dao-le-05.jpg",
         "width": 3840,
         "height": 2160
       },
       {
-        "src": "assets/images/meng-dao-le-06.webp",
+        "src": "assets/optimized/work-display/meng-dao-le-06.jpg",
         "width": 3840,
         "height": 2160
       },
       {
-        "src": "assets/images/meng-dao-le-07.webp",
+        "src": "assets/optimized/work-display/meng-dao-le-07.jpg",
         "width": 3840,
         "height": 2160
       },
       {
-        "src": "assets/images/meng-dao-le-08.webp",
+        "src": "assets/optimized/work-display/meng-dao-le-08.jpg",
         "width": 3840,
         "height": 2160
       },
       {
-        "src": "assets/images/meng-dao-le-09.webp",
+        "src": "assets/optimized/work-display/meng-dao-le-09.jpg",
         "width": 3840,
         "height": 2160
       },
       {
-        "src": "assets/images/meng-dao-le-10.webp",
+        "src": "assets/optimized/work-display/meng-dao-le-10.jpg",
         "width": 3840,
         "height": 2160
       },
       {
-        "src": "assets/images/meng-dao-le-11.webp",
+        "src": "assets/optimized/work-display/meng-dao-le-11.jpg",
         "width": 3840,
         "height": 2160
       },
       {
-        "src": "assets/images/meng-dao-le-12.webp",
+        "src": "assets/optimized/work-display/meng-dao-le-12.jpg",
         "width": 3840,
         "height": 2160
       },
       {
-        "src": "assets/images/meng-dao-le-13.webp",
+        "src": "assets/optimized/work-display/meng-dao-le-13.jpg",
         "width": 3840,
         "height": 2160
       }
@@ -589,63 +589,63 @@ window.WORKS = [
     "lens": "DZO Simera-C",
     "frames": [
       {
-        "src": "assets/images/page_25_photo_01.webp",
+        "src": "assets/optimized/work-display/page_25_photo_01.jpg",
         "page": 25,
         "width": 1572,
         "height": 956,
         "source": "Assets/objects/page_25_photo_01.png"
       },
       {
-        "src": "assets/images/page_26_photo_01.webp",
+        "src": "assets/optimized/work-display/page_26_photo_01.jpg",
         "page": 26,
         "width": 940,
         "height": 572,
         "source": "Assets/objects/page_26_photo_01.png"
       },
       {
-        "src": "assets/images/page_26_photo_04.webp",
+        "src": "assets/optimized/work-display/page_26_photo_04.jpg",
         "page": 26,
         "width": 940,
         "height": 572,
         "source": "Assets/objects/page_26_photo_04.png"
       },
       {
-        "src": "assets/images/page_26_photo_02.webp",
+        "src": "assets/optimized/work-display/page_26_photo_02.jpg",
         "page": 26,
         "width": 836,
         "height": 568,
         "source": "Assets/objects/page_26_photo_02.png"
       },
       {
-        "src": "assets/images/page_26_photo_03.webp",
+        "src": "assets/optimized/work-display/page_26_photo_03.jpg",
         "page": 26,
         "width": 940,
         "height": 568,
         "source": "Assets/objects/page_26_photo_03.png"
       },
       {
-        "src": "assets/images/page_27_photo_01.webp",
+        "src": "assets/optimized/work-display/page_27_photo_01.jpg",
         "page": 27,
         "width": 852,
         "height": 568,
         "source": "Assets/objects/page_27_photo_01.png"
       },
       {
-        "src": "assets/images/page_27_photo_04.webp",
+        "src": "assets/optimized/work-display/page_27_photo_04.jpg",
         "page": 27,
         "width": 940,
         "height": 568,
         "source": "Assets/objects/page_27_photo_04.png"
       },
       {
-        "src": "assets/images/page_27_photo_02.webp",
+        "src": "assets/optimized/work-display/page_27_photo_02.jpg",
         "page": 27,
         "width": 940,
         "height": 572,
         "source": "Assets/objects/page_27_photo_02.png"
       },
       {
-        "src": "assets/images/page_27_photo_03.webp",
+        "src": "assets/optimized/work-display/page_27_photo_03.jpg",
         "page": 27,
         "width": 964,
         "height": 588,
@@ -668,63 +668,63 @@ window.WORKS = [
     "lens": "Blazar Mantis",
     "frames": [
       {
-        "src": "assets/images/page_28_photo_01.webp",
+        "src": "assets/optimized/work-display/page_28_photo_01.jpg",
         "page": 28,
         "width": 2244,
         "height": 876,
         "source": "Assets/objects/page_28_photo_01.png"
       },
       {
-        "src": "assets/images/page_29_photo_01.webp",
+        "src": "assets/optimized/work-display/page_29_photo_01.jpg",
         "page": 29,
         "width": 988,
         "height": 392,
         "source": "Assets/objects/page_29_photo_01.png"
       },
       {
-        "src": "assets/images/page_29_photo_04.webp",
+        "src": "assets/optimized/work-display/page_29_photo_04.jpg",
         "page": 29,
         "width": 1004,
         "height": 400,
         "source": "Assets/objects/page_29_photo_04.png"
       },
       {
-        "src": "assets/images/page_29_photo_02.webp",
+        "src": "assets/optimized/work-display/page_29_photo_02.jpg",
         "page": 29,
         "width": 988,
         "height": 392,
         "source": "Assets/objects/page_29_photo_02.png"
       },
       {
-        "src": "assets/images/page_29_photo_03.webp",
+        "src": "assets/optimized/work-display/page_29_photo_03.jpg",
         "page": 29,
         "width": 1004,
         "height": 400,
         "source": "Assets/objects/page_29_photo_03.png"
       },
       {
-        "src": "assets/images/page_30_photo_02.webp",
+        "src": "assets/optimized/work-display/page_30_photo_02.jpg",
         "page": 30,
         "width": 688,
         "height": 396,
         "source": "Assets/objects/page_30_photo_02.png"
       },
       {
-        "src": "assets/images/page_30_photo_03.webp",
+        "src": "assets/optimized/work-display/page_30_photo_03.jpg",
         "page": 30,
         "width": 948,
         "height": 404,
         "source": "Assets/objects/page_30_photo_03.png"
       },
       {
-        "src": "assets/images/page_30_photo_01.webp",
+        "src": "assets/optimized/work-display/page_30_photo_01.jpg",
         "page": 30,
         "width": 1020,
         "height": 404,
         "source": "Assets/objects/page_30_photo_01.png"
       },
       {
-        "src": "assets/images/page_30_photo_04.webp",
+        "src": "assets/optimized/work-display/page_30_photo_04.jpg",
         "page": 30,
         "width": 1024,
         "height": 408,
@@ -747,35 +747,35 @@ window.WORKS = [
     "lens": "Canon FD",
     "frames": [
       {
-        "src": "assets/images/page_31_photo_01.webp",
+        "src": "assets/optimized/work-display/page_31_photo_01.jpg",
         "page": 31,
         "width": 1744,
         "height": 916,
         "source": "Assets/objects/page_31_photo_01.png"
       },
       {
-        "src": "assets/images/page_32_photo_01.webp",
+        "src": "assets/optimized/work-display/page_32_photo_01.jpg",
         "page": 32,
         "width": 1080,
         "height": 570,
         "source": "Assets/objects/page_32_photo_01.png"
       },
       {
-        "src": "assets/images/page_32_photo_02.webp",
+        "src": "assets/optimized/work-display/page_32_photo_02.jpg",
         "page": 32,
         "width": 1080,
         "height": 570,
         "source": "Assets/objects/page_32_photo_02.png"
       },
       {
-        "src": "assets/images/page_32_photo_03.webp",
+        "src": "assets/optimized/work-display/page_32_photo_03.jpg",
         "page": 32,
         "width": 1080,
         "height": 570,
         "source": "Assets/objects/page_32_photo_03.png"
       },
       {
-        "src": "assets/images/page_32_photo_04.webp",
+        "src": "assets/optimized/work-display/page_32_photo_04.jpg",
         "page": 32,
         "width": 1080,
         "height": 570,
@@ -798,28 +798,28 @@ window.WORKS = [
     "lens": "Arri Master Prime",
     "frames": [
       {
-        "src": "assets/images/page_33_photo_01.webp",
+        "src": "assets/optimized/work-display/page_33_photo_01.jpg",
         "page": 33,
         "width": 1220,
         "height": 928,
         "source": "Assets/objects/page_33_photo_01.png"
       },
       {
-        "src": "assets/images/page_34_photo_01.webp",
+        "src": "assets/optimized/work-display/page_34_photo_01.jpg",
         "page": 34,
         "width": 1280,
         "height": 980,
         "source": "Assets/objects/page_34_photo_01.png"
       },
       {
-        "src": "assets/images/page_34_photo_02.webp",
+        "src": "assets/optimized/work-display/page_34_photo_02.jpg",
         "page": 34,
         "width": 744,
         "height": 564,
         "source": "Assets/objects/page_34_photo_02.png"
       },
       {
-        "src": "assets/images/page_34_photo_03.webp",
+        "src": "assets/optimized/work-display/page_34_photo_03.jpg",
         "page": 34,
         "width": 744,
         "height": 564,
@@ -844,32 +844,32 @@ window.WORKS = [
     "lens": "Canon FD",
     "frames": [
       {
-        "src": "assets/images/chen-kong-zheng-zhong-01.webp",
+        "src": "assets/optimized/work-display/chen-kong-zheng-zhong-01.jpg",
         "width": 2048,
         "height": 1556
       },
       {
-        "src": "assets/images/chen-kong-zheng-zhong-02.webp",
+        "src": "assets/optimized/work-display/chen-kong-zheng-zhong-02.jpg",
         "width": 2048,
         "height": 1556
       },
       {
-        "src": "assets/images/chen-kong-zheng-zhong-03.webp",
+        "src": "assets/optimized/work-display/chen-kong-zheng-zhong-03.jpg",
         "width": 2048,
         "height": 1556
       },
       {
-        "src": "assets/images/chen-kong-zheng-zhong-04.webp",
+        "src": "assets/optimized/work-display/chen-kong-zheng-zhong-04.jpg",
         "width": 2048,
         "height": 1556
       },
       {
-        "src": "assets/images/chen-kong-zheng-zhong-05.webp",
+        "src": "assets/optimized/work-display/chen-kong-zheng-zhong-05.jpg",
         "width": 2048,
         "height": 1556
       },
       {
-        "src": "assets/images/page_36_photo_02.webp",
+        "src": "assets/optimized/work-display/page_36_photo_02.jpg",
         "page": 36,
         "width": 720,
         "height": 552,

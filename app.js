@@ -5,6 +5,7 @@ const $ = s => document.querySelector(s);
 const escape = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const pad = n => String(n).padStart(2,'0');
 const asset = (p,n) => works[p].frames[Math.min(n,works[p].frames.length-1)].src;
+const workThumb = src => src.replace('assets/optimized/work-display/','assets/optimized/work-thumbs/');
 // Editorial selection. The full archive below retains all projects.
 
 $('#index-open span').textContent=`[ ${works.length} ]`;$('.selected-title .count').textContent=`( ${works.length} )`;$('.archive-foot span').textContent=`${works.length} PROJECTS`;$('#index-dialog .dialog-nav span').textContent=`INDEX / ${works.length} WORKS`;
@@ -14,11 +15,13 @@ $('#archive-list').innerHTML=works.map(p=>`<button class="archive-row" data-proj
 $('#index-list').innerHTML=works.map(p=>`<button class="index-item" data-project="${p.id}"><span class="num">${pad(p.id+1)}</span><span class="name">${escape(p.title)}${p.english?`<em>${escape(p.english)}</em>`:''}</span><span>↗</span></button>`).join('');
 const projectDialog=$('#project-dialog'), indexDialog=$('#index-dialog');
 let project=0,frame=0,previousFocus=null;
+let frameRequest=0;
 function lock(){document.body.classList.add('modal-open')}
 function unlock(){if(!projectDialog.open&&!indexDialog.open&&!document.querySelector('#photo-dialog')?.open)document.body.classList.remove('modal-open')}
 function showFrame(n){
  const p=works[project];frame=(n+p.frames.length)%p.frames.length;
- const f=p.frames[frame],im=$('#viewer-image');im.src=f.src;im.alt=`《${p.title}》第 ${frame+1} 张电影静帧`;im.width=f.width;im.height=f.height;
+ const f=p.frames[frame],im=$('#viewer-image'),request=++frameRequest;im.alt=`《${p.title}》第 ${frame+1} 张电影静帧`;im.width=f.width;im.height=f.height;im.src=workThumb(f.src);
+ const full=new Image();full.decoding='async';full.fetchPriority='high';full.onload=()=>{if(request===frameRequest)im.src=f.src};full.src=f.src;
  $('#viewer-count').textContent=`${pad(frame+1)} / ${pad(p.frames.length)}`;
  $('#viewer-caption').textContent=`${p.title} / SELECTED STILL`;
  document.querySelectorAll('.thumb').forEach((el,i)=>{el.classList.toggle('active',i===frame);el.setAttribute('aria-pressed',i===frame?'true':'false');});
@@ -29,7 +32,7 @@ function openProject(id,n=0){
  if(indexDialog.open)indexDialog.close();
  $('#project-title').textContent=p.title;$('#project-title').classList.toggle('long-title',p.title.length>7);$('#project-english').textContent=p.english;$('#project-caption').textContent=p.caption;$('#project-label').textContent=`PROJECT ${pad(p.id+1)} / ${works.length} — ${escape(p.date || p.year)}`;
  $('#project-info').innerHTML=`<dl><dt>ROLE / 负责工种</dt><dd>${p.roles.map(escape).join('<br>')}</dd></dl><dl><dt>YEAR / 年份</dt><dd>${escape(p.date || p.year)}</dd></dl><dl><dt>CAMERA / 摄影机</dt><dd>${escape(p.camera)}</dd></dl><dl><dt>LENS / 镜头</dt><dd>${escape(p.lens)}</dd></dl>`;
- $('#thumbnails').innerHTML=p.frames.map((f,i)=>`<button class="thumb" data-frame="${i}" aria-label="查看第 ${i+1} 张静帧" aria-pressed="false"><img src="${f.src}" alt="" loading="lazy"></button>`).join('');
+ $('#thumbnails').innerHTML=p.frames.map((f,i)=>`<button class="thumb" data-frame="${i}" aria-label="查看第 ${i+1} 张静帧" aria-pressed="false"><img src="${workThumb(f.src)}" alt="" width="520" height="293" decoding="async" loading="lazy"></button>`).join('');
  if(!projectDialog.open)projectDialog.showModal();lock();projectDialog.scrollTop=0;showFrame(n);
  const next=works[(project+1)%works.length];$('#next-project').textContent=`下一部 / ${next.title} ↗`;
 }
