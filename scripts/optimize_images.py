@@ -4,20 +4,42 @@
 from __future__ import annotations
 
 import argparse
+from io import BytesIO
 from pathlib import Path
 
-from PIL import Image, ImageOps
+from PIL import Image, ImageOps, UnidentifiedImageError
 
 
 ROOT = Path(__file__).resolve().parents[1]
 WORK_SOURCE = ROOT / "assets" / "images"
 PHOTO_SOURCE = ROOT / "assets" / "photography"
 IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff"}
+RECOVERED_PREFIXES: set[tuple[str, int]] = set()
+
+
+def open_image(source: Path):
+    try:
+        return Image.open(source)
+    except UnidentifiedImageError:
+        data = source.read_bytes()
+        prefix = data[:4096]
+        signatures = [b"\xff\xd8\xff", b"\x89PNG\r\n\x1a\n", b"II*\x00", b"MM\x00*"]
+        offsets = [offset for signature in signatures if (offset := prefix.find(signature)) >= 0]
+        webp_offset = prefix.find(b"RIFF")
+        if webp_offset >= 0 and prefix[webp_offset + 8 : webp_offset + 12] == b"WEBP":
+            offsets.append(webp_offset)
+        if not offsets:
+            raise
+        offset = min(offsets)
+        if offset == 0:
+            raise
+        RECOVERED_PREFIXES.add((source.name, offset))
+        return Image.open(BytesIO(data[offset:]))
 
 
 def save_variant(source: Path, destination: Path, longest_edge: int, quality: int) -> None:
     destination.parent.mkdir(parents=True, exist_ok=True)
-    with Image.open(source) as original:
+    with open_image(source) as original:
         image = ImageOps.exif_transpose(original)
         if image.mode in ("RGBA", "LA") or "transparency" in image.info:
             rgba = image.convert("RGBA")
@@ -81,6 +103,12 @@ def main() -> None:
         + f"; source payload {source_bytes / 1024 / 1024:.1f} MiB, "
         + f"site variants {output_bytes / 1024 / 1024:.1f} MiB."
     )
+    if RECOVERED_PREFIXES:
+        print(
+            "Skipped malformed leading bytes before recognized image signatures: "
+            + ", ".join(f"{name} ({offset} bytes)" for name, offset in sorted(RECOVERED_PREFIXES))
+            + "."
+        )
 
 
 if __name__ == "__main__":
